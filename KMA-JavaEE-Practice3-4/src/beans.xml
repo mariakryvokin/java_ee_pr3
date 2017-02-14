@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="truelecter.practice3" />
+
+    <!-- Definition for textEditor bean -->
+    <!--<bean id="textEditor" class="truelecter.practice3.TextEditor">-->
+        <!--<constructor-arg ref="constructorArgumentSpellChecker"/>-->
+        <!--<property name="availableSpellCheckers">-->
+            <!--<list>-->
+                <!--<ref bean="constructorArgumentSpellChecker"/>-->
+                <!--<ref bean="fieldInjectedSpellChecker"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!-- alternate Definition for textEditor bean -->
+    <!--<bean id="textEditor" class="truelecter.practice3.TextEditor">-->
+        <!--<property name="spellChecker" ref="fieldInjectedSpellChecker"/>-->
+        <!--<property name="availableSpellCheckers">-->
+            <!--<list>-->
+                <!--<ref bean="constructorArgumentSpellChecker"/>-->
+                <!--<ref bean="fieldInjectedSpellChecker"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="spellChecker" class="truelecter.practice3.SpellCheckerA">-->
+    <!--</bean>-->
+
+    <!--<bean id="fieldInjectedSpellChecker" class="truelecter.practice3.SpellCheckerB">-->
+    <!--</bean>-->
+
+</beans>
